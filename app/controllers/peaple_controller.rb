@@ -1,0 +1,2 @@
+class PeapleController < ApplicationController
+end

@@ -1,0 +1,38 @@
+
+div#campaign_list {
+	background-color: silver;
+
+}
+
+hr {
+	border:0;
+	color: #555; 
+	background-color:#555; 
+	height:3px;
+}
+
+h2 {
+	color:blue;
+	margin-left: 10px;
+}
+
+table {
+	width: 98%;
+	margin:0 auto;
+}
+
+tr.head {
+	color: black;
+	background-color: grey;
+	font-weight:bold;
+	
+}
+tr.body {
+	color:black;
+	background-color: white;
+}
+
+.button {
+	background-color:silver;
+}
+
