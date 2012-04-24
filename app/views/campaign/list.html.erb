@@ -3,27 +3,38 @@
 
 <div id="campaign_list">
 	<hr />
-	<% form_tag(:action => "new") do %>
-			<h2>All campaigns 
-	  	<%= submit_tag "new" %>
-			</h2>
-	<% end -%>
+	<table >
+		<tr>
+			<td>
+				<h2>All campaigns </h2>
+			</td>
+			<td>
+				<% form_tag(:action => "new") do %>
+				  	<%= submit_tag "new" %>
+				<% end -%>
+			</td>
+			<td>
+
+			</td>
+		</tr>
+	</table>
+
 	
 	
 	<% if @campaigns.blank? %>
-		<p> There are not any cacmpaigns </p>
+		<p> There are not any campaigns </p>
 	<% else %>
-	<table id='table'>
+	<table id='list'>
 		<tr class='head'>
-			<td class='name'> Campaign Name </td>
-			<td class='status'> Status </td>
-			<td class='created'>Created at </td>
+			<td> <%= link_to "Campaign name", {:action => 'list', :sort => 'name'} %></td>
+			<td> <%= link_to "Created at", {:action => 'list', :sort => 'created_at'}  %></td>
+			<td> <%= link_to "Updated at", {:action => 'list', :sort => 'updated_at'} %></td>
 		</tr>
 		<% @campaigns.each do |c| %>
 			<tr class='body'>
-			<td> <%= link_to c.name, {:action => 'edit', :id => c.id} %></td>
-			<td> <%= c.status %> </td>
-			<td> <%= c.created_at.to_date %> </td>
+			<td> <%= link_to c.name, {:action => 'show', :id => c.id} %></td>
+			<td> <%= c.created_at.to_s %> </td>
+			<td> <%= c.updated_at.to_s %> </td>
 			<td class='button'>
 				<% form_tag({:action => "delete", :id => c.id}) do %>
 				  	<%= submit_tag "delete", :onclick => "return confirm('Are you sure?')"  %>

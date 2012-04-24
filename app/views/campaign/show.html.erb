@@ -1,2 +1,18 @@
-<h1> <%= @campaign.name %></h1>
+<h1> Campaigns </h1>
+<h1> Campaigns Detail</h1>
+<%= render :partial => "show_buttons"%>
+<h2> <%= @campaign.name %></h2>
+<p> Status: <%= @campaign.status.name %></p>
+<p> Type: <%= @campaign.type.name %></p>
+<div id="planning">
+	<p class="head">Planning</p>
+</div>
+
+<div id="statistic">
+	<p class="head"> Statistics</p>
+	<p> Created by: <%= "Нужно создавать от пользователя" %></p>
+	<p> Modified by: <%= "Редактирует тоже пользователь" %></p>
+</div>
+
+<%= render "show_buttons"%>
 <%= link_to "Back", :action => 'list' %>

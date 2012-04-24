@@ -2,8 +2,8 @@ class Campaigns < ActiveRecord::Migration
   def self.up
     create_table :campaigns do |t|
       t.string  :name
-      t.string  :status
-      t.string  :type
+      t.integer  :status_id
+      t.integer  :type_id
       t.timestamp :created_at
       t.timestamp :updated_at
     end

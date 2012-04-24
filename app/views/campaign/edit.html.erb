@@ -1,17 +1,10 @@
-<h1 >Edit campaign details</h1>
-<% form_tag(:action => "update", :id => @campaign) do %>
-
-	<p><label for="campaign_name">Name</label>:
-	<%= text_field 'campaign', 'name' %></p>
-	
-	<p><label for='campaign_status'>Status</label>:
-	<%= text_field 'campaign', 'status' %></p>
-	
-	<p><label for='campaign_type'>Type</label>:
-	<%= text_field 'campaign', 'type' %></p>
-	
+<h1 >Campaign edit</h1>
+<%= render "edit_buttons"%>
+	<% form_tag(:action => "update", :id => @campaign) do %>
+		<%= render "input"%>
 	<%= submit_tag "Save" %>
-  
 <% end -%>
+
+<%= render "edit_buttons"%>
 
 <%= link_to "Back", :action => 'list' %>

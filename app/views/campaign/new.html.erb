@@ -1,15 +1,6 @@
 <h1>Add new campaign</h1>
-<% form_tag(:action => "create") do %>
-
-		<p><label for="campaign_name">Name</label>:
-		<%= text_field 'campaign', 'name' %></p>
-		
-		<p><label for='campaign_status'>Status</label>:
-		<%= text_field 'campaign', 'status' %></p>
-		
-		<p><label for='campaign_type'>Type</label>:
-		<%= text_field 'campaign', 'type' %></p>
-		
-  	<%= submit_tag "Create" %>	
+	<% form_tag(:action => "create") do %>
+		<%= render "input"%>
+  <%= submit_tag "Create" %>	
 <% end -%>
 <%= link_to "Back", {:action => 'list'} %>

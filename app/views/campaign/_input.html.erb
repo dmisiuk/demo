@@ -1,0 +1,10 @@
+<p class='head'>Campaign information</p>
+<p><label for="campaign_name">Name</label>:
+<%= text_field 'campaign', 'name' %></p>
+
+<p><label for='campaign_status'>Status</label>:
+<%= collection_select(:campaign, :status_id, @statuses, :id, :name) %></p>
+
+<p><label for='campaign_type'>Type</label>:
+<%= collection_select(:campaign, :type_id, @types, :id, :name) %></p>
+<p class='head'>Planning</p>

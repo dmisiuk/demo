@@ -17,11 +17,14 @@ h2 {
 }
 
 table {
-	width: 98%;
+
 	margin:0 auto;
 }
+table#list {
+		width: 98%;
+}
 
-tr.head {
+.head {
 	color: black;
 	background-color: grey;
 	font-weight:bold;

@@ -1,0 +1,30 @@
+<table>
+<tr>
+	<td>
+		<% form_tag(:action => "edit", :id => @campaign) do %>
+		<%= submit_tag "Edit" %>
+		<% end -%>
+	</td>
+	<td>
+		<% form_tag({:action => "delete", :id => @campaign}) do %>
+		  	<%= submit_tag "delete", :onclick => "return confirm('Are you sure?')"  %>
+		<% end -%>
+	</td>
+	<td>
+		<% form_tag({:action => "clone", :id => @campaign}) do %>
+		  	<%= submit_tag "clone"%>
+		<% end -%>
+	</td>
+	<td>
+		<% form_tag({:action => "manage", :id => @campaign}) do %>
+		  	<%= submit_tag "Manage Members"%>
+		<% end -%>
+	</td>
+	<td>
+		<% form_tag({:action => "setup", :id => @campaign}) do %>
+		  	<%= submit_tag "Advanced Setup"%>
+		<% end -%>
+	</td>
+	
+</tr>
+</table>
